@@ -540,6 +540,13 @@ PRODUCT_PACKAGES += \
 # Thermal Controller
 PRODUCT_PACKAGES += \
    ThermalController
+   
+# Thermal Conf
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/thermal/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
+    $(COMMON_PATH)/configs/thermal/thermal-engine-map.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-map.conf \
+    $(COMMON_PATH)/configs/thermal/thermal-engine-normal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-normal.conf \
+    $(COMMON_PATH)/configs/thermal/thermal-engine-camera.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-camera.conf
 
 # USB
 PRODUCT_PACKAGES += \
